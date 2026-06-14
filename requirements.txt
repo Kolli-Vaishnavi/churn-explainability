@@ -1,0 +1,12 @@
+pandas
+numpy<2
+scikit-learn
+xgboost
+shap==0.46.0
+lime
+fairlearn
+streamlit
+joblib
+matplotlib
+seaborn
+mlflow

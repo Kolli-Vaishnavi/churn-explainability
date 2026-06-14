@@ -1,0 +1,6 @@
+customer_idx,actual,churn_prob,shap_top5,lime_top5,overlap,divergence_score
+3,Churn,0.114,"['Contract', 'OnlineSecurity', 'MonthlyCharges', 'tenure', 'TechSupport']","['Contract <= 0.00', 'tenure <= 9.00', 'MonthlyCharges <= 35.80', '0.00 < OnlineSecurity <= 1.00', 'SeniorCitizen <= 0.00']",0,5
+5,Churn,0.525,"['tenure', 'MonthlyCharges', 'Contract', 'OnlineSecurity', 'PaymentMethod']","['Contract <= 0.00', 'MonthlyCharges > 90.05', 'tenure > 56.00', 'OnlineSecurity <= 0.00', 'TechSupport <= 0.00']",0,5
+8,Churn,0.644,"['Contract', 'OnlineSecurity', 'MonthlyCharges', 'MultipleLines', 'Dependents']","['Contract <= 0.00', 'OnlineSecurity <= 0.00', 'TechSupport <= 0.00', '1.00 < PaymentMethod <= 2.00', '0.00 < Dependents <= 1.00']",0,5
+0,No Churn,0.01,"['Contract', 'tenure', 'TotalCharges', 'MonthlyCharges', 'TechSupport']","['Contract > 1.00', 'tenure > 56.00', 'OnlineSecurity <= 0.00', 'MultipleLines <= 0.00', '0.00 < PaperlessBilling <= 1.00']",0,5
+1,No Churn,0.753,"['Contract', 'MonthlyCharges', 'tenure', 'OnlineSecurity', 'TechSupport']","['Contract <= 0.00', 'tenure <= 9.00', 'OnlineSecurity <= 0.00', 'TechSupport <= 0.00', '0.00 < PaperlessBilling <= 1.00']",0,5
