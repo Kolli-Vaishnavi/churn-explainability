@@ -1,7 +1,5 @@
 # 🔍 ChurnXplain — Explainable AI Dashboard for Customer Churn
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_STREAMLIT_URL_HERE)
-
 > **Can we trust a machine learning model we can't explain?**
 > ChurnXplain goes beyond accuracy — it explains *why* predictions happen,
 > compares two explainability methods, and audits for demographic fairness.
