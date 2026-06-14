@@ -13,18 +13,10 @@ faces a critical question: *why is this customer predicted to churn?*
 Without an answer, retention teams can't act meaningfully — they can only guess.
 
 ChurnXplain solves this by combining:
-- **Prediction** — XGBoost churn classifier (ROC-AUC: [your score])
+- **Prediction** — XGBoost churn classifier (ROC-AUC: [0.8346])
 - **Explanation** — SHAP and LIME local + global explanations
 - **Comparison** — divergence analysis between the two methods
 - **Fairness** — demographic parity audit across gender and senior status
-
----
-
-## 🖥️ Live Demo
-
-👉 **[Launch Dashboard]([YOUR_STREAMLIT_URL_HERE])**
-
-![Dashboard Preview](data/shap_vs_lime_comparison.png)
 
 ---
 
@@ -45,11 +37,13 @@ ChurnXplain solves this by combining:
   for human review rather than automated
 
 **Fairness Audit:**
-- Demographic Parity (Gender): [your value] — [low/moderate/high] disparity
-- Demographic Parity (Senior Citizen): [your value] — Senior citizens predicted
+- Demographic Parity (Gender): [0.0301] — [low] disparity
+- Demographic Parity (Senior Citizen): [0.2309] — Senior citizens predicted
   to churn at a [higher/similar] rate
-- Equalized Odds (Senior): [your value]
-- [Add 1-2 sentence interpretation based on your actual numbers]
+- Equalized Odds (Senior): [0.1722]
+- Senior citizens were predicted to churn at a 14.2% higher rate than non-seniors,
+  the largest fairness gap identified. Gender showed negligible disparity (0.032).
+  Recommend monitoring senior cohort predictions before production deployment.
 
 ---
 
@@ -97,8 +91,8 @@ churn-explainability/
 
 | Model | Accuracy | F1 Score | ROC-AUC |
 |---|---|---|---|
-| Logistic Regression | [your value] | [your value] | [your value] |
-| XGBoost | [your value] | [your value] | [your value] |
+| Logistic Regression | [0.7939] | [0.5927] | [0.8345] |
+| XGBoost | [0.7903] | [0.5731] | [0.8346] |
 
 > Note: Accuracy is intentionally not the primary metric. The goal is
 > *explainability* — a model worth explaining, not just a high accuracy number.
@@ -134,13 +128,12 @@ Audited using **Fairlearn** across two sensitive attributes:
 
 | Metric | Gender | Senior Citizen |
 |---|---|---|
-| Demographic Parity Difference | [value] | [value] |
-| Equalized Odds Difference | — | [value] |
+| Demographic Parity Difference | [0.0301] | [value] |
+| Equalized Odds Difference | — | [0.2309] |
 
-**Interpretation:** [Write 2-3 lines here based on your actual numbers.
-Example: "Senior citizens were predicted to churn at a 12% higher rate than
-non-seniors. This likely reflects genuine behavioural differences in the dataset
-but warrants monitoring before production deployment."]
+**Interpretation:** Senior citizens were predicted to churn at a 14.2% higher rate than non-seniors,
+  the largest fairness gap identified. Gender showed negligible disparity (0.032).
+  Recommend monitoring senior cohort predictions before production deployment.
 
 ---
 
